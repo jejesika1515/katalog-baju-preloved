@@ -1,8 +1,6 @@
+import 'package:ecommerce/screens/login/otp_screen.dart';
+import 'package:ecommerce/utils/global.dart';
 import 'package:flutter/material.dart';
-import 'package:jejechic/utils/global.dart';
-import 'package:jejechic/screens/register/register_screen.dart';
-import 'package:flutter/gestures.dart';
-import 'package:jejechic/screens/login/otp_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -17,7 +15,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'LOGIN',
                   style: TextStyle(
                     fontSize: 30,
@@ -26,8 +24,8 @@ class LoginScreen extends StatelessWidget {
                     fontFamily: 'Montserrat',
                   ),
                 ),
-                SizedBox(height: 20),
-                Text(
+                const SizedBox(height: 20),
+                const Text(
                   'Please login to your account',
                   style: TextStyle(
                     fontSize: 15,
@@ -36,13 +34,13 @@ class LoginScreen extends StatelessWidget {
                     fontFamily: 'Montserrat',
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Container(
                   width: 500,
                   height: 70,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       colors: [Color(0xFF2A2237), Color(0xFF2A2237)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
@@ -51,8 +49,8 @@ class LoginScreen extends StatelessWidget {
                     ),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
+                  child: const Padding(
+                    padding: EdgeInsets.only(left: 10.0),
                     child: TextField(
                       style: TextStyle(
                         fontSize: 15,
@@ -73,12 +71,13 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => OtpScreen()),
+                      MaterialPageRoute(
+                          builder: (context) => const OtpScreen()),
                     );
                   },
                   child: Container(
@@ -86,10 +85,10 @@ class LoginScreen extends StatelessWidget {
                     height: 70,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: Color(0xFF182381),
+                      color: const Color(0xFF182381),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Send Code',
                         style: TextStyle(
@@ -100,39 +99,6 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                ),
-                SizedBox(height: 20),
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: "Don't have an account ? ",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      TextSpan(
-                        text: 'Register',
-                        style: TextStyle(
-                          color: Color(0xFF182381),
-                          fontSize: 15,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.w400,
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => RegisterScreen()),
-                            );
-                          },
-                      ),
-                    ],
                   ),
                 ),
               ],

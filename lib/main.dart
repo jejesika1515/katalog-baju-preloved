@@ -1,31 +1,38 @@
+import 'package:ecommerce/screens/landing/landing_screen.dart';
+import 'package:ecommerce/screens/landing/providers/navigation_bar_provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:jejechic/screens/basket/basket_screen.dart';
-import 'package:jejechic/screens/home/home_screen.dart'; 
-import 'package:jejechic/screens/login/login_screen.dart';
-import 'package:jejechic/screens/login/otp_screen.dart'; 
-import 'package:jejechic/screens/profile/profile_screen.dart';
-import 'package:jejechic/screens/register/register_screen.dart';
-import 'package:jejechic/screens/user/user_screen.dart';
-import 'package:jejechic/screens/admin/admin_screen.dart'; 
-void main() {
-  runApp(MyApp());
+import 'package:provider/provider.dart';
+import 'firebase_options.dart';
+
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => AppNavigationBarProvider(),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/home',
-      routes: {
-        '/home': (context) => HomeScreen(),
-        '/login': (context) => LoginScreen(),
-        '/otp': (context) => OtpScreen(),
-        '/register': (context) => RegisterScreen(),
-        '/basket': (context) => BasketScreen(),
-        '/user': (context) => UserScreen(),
-        '/profile': (context) => ProfileScreen(),
-        '/admin': (context) => AdminScreen(),
-      },
+      title: 'JejeChic - find new life in preloved style',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const LandingScreen(),
     );
   }
 }
