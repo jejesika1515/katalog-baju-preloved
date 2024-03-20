@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart'; // Import untuk menggunakan TapGestureRecognizer
+import 'package:flutter/gestures.dart';
 import 'package:jejechic/utils/global.dart';
-import 'package:jejechic/screens/login/login_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -11,13 +10,11 @@ class RegisterScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background
           Global().background(context),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Register Text
                 Text(
                   'REGISTER',
                   style: TextStyle(
@@ -28,7 +25,6 @@ class RegisterScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Please register to make your account Text
                 Text(
                   'Please register to make your account',
                   style: TextStyle(
@@ -39,7 +35,6 @@ class RegisterScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Rectangle 1
                 Container(
                   width: 500,
                   height: 70,
@@ -73,11 +68,11 @@ class RegisterScreen extends StatelessWidget {
                           fontFamily: 'Montserrat',
                         ),
                       ),
+                      textInputAction: TextInputAction.next,
                     ),
                   ),
                 ),
                 SizedBox(height: 20),
-                // Rectangle 2
                 Container(
                   width: 500,
                   height: 70,
@@ -111,11 +106,11 @@ class RegisterScreen extends StatelessWidget {
                           fontFamily: 'Montserrat',
                         ),
                       ),
+                      textInputAction: TextInputAction.next,
                     ),
                   ),
                 ),
                 SizedBox(height: 20),
-                // Rectangle 3
                 Container(
                   width: 500,
                   height: 70,
@@ -149,11 +144,11 @@ class RegisterScreen extends StatelessWidget {
                           fontFamily: 'Montserrat',
                         ),
                       ),
+                      textInputAction: TextInputAction.next,
                     ),
                   ),
                 ),
                 SizedBox(height: 20),
-                // Rectangle 4
                 Container(
                   width: 500,
                   height: 70,
@@ -187,11 +182,11 @@ class RegisterScreen extends StatelessWidget {
                           fontFamily: 'Montserrat',
                         ),
                       ),
+                      textInputAction: TextInputAction.next,
                     ),
                   ),
                 ),
                 SizedBox(height: 30),
-                // Rectangle 5
                 Container(
                   width: 500,
                   height: 70,
@@ -213,7 +208,6 @@ class RegisterScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Already have an account Text
                 RichText(
                   text: TextSpan(
                     children: [
@@ -222,7 +216,7 @@ class RegisterScreen extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 15,
-                          fontWeight: FontWeight.w400, 
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                       TextSpan(
@@ -234,7 +228,6 @@ class RegisterScreen extends StatelessWidget {
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            // Navigasi ke halaman LoginScreen saat teks "Login" di-klik
                             Navigator.pushNamed(context, '/login');
                           },
                       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Global {
-  Widget background(BuildContext context) { 
+  Widget background(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
@@ -19,7 +19,9 @@ class Global {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 20), // Menambahkan jarak kosong untuk menyesuaikan posisi elemen-elemen berikutnya
+          SizedBox(
+              height:
+                  20),
           Container(
             width: MediaQuery.of(context).size.width * 0.7,
             height: MediaQuery.of(context).size.height * 0.7,

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:jejechic/screens/login/login_screen.dart';
-import 'package:jejechic/screens/basket/basket_screen.dart'; 
+import 'package:jejechic/screens/basket/basket_screen.dart';
+import 'package:jejechic/screens/profile/profile_screen.dart';
 import 'package:jejechic/utils/global.dart';
 
-class HomeScreen extends StatelessWidget {
+class UserScreen extends StatelessWidget {
   final Global global = Global();
 
   final List<Map<String, dynamic>> menProducts = [
@@ -177,10 +178,7 @@ class HomeScreen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.search,
-                                size: 20,
-                                color: Colors
-                                    .black),
+                            Icon(Icons.search, size: 20, color: Colors.black),
                             SizedBox(width: 5),
                             Expanded(
                               child: TextField(
@@ -234,13 +232,13 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => LoginScreen()),
+                              builder: (context) => ProfileScreen()),
                         );
                       },
                       child: SvgPicture.asset(
-                        'assets/svgs/profil.svg',
-                        width: 35,
-                        height: 35,
+                        'assets/svgs/user-plus.svg',
+                        width: 26,
+                        height: 26,
                       ),
                     ),
                   ),
@@ -719,7 +717,7 @@ class ProductItem extends StatelessWidget {
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
                   fontFamily: 'Montserrat',
-                  color: Colors.black,   
+                  color: Colors.black,
                 ),
                 textAlign: TextAlign.center,
               ),

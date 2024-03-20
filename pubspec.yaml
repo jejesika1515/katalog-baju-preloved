@@ -63,13 +63,36 @@ flutter:
     - assets/svgs/whatsapp.svg
     - assets/svgs/profil.svg
     - assets/svgs/keranjang.svg
-    - assets/images/instagram.png
-    - assets/images/whatsapp.png
+    - assets/svgs/user-plus.svg
+    - assets/svgs/delete.svg
+    - assets/svgs/change.svg
+    - assets/svgs/user-2.svg
+    - assets/svgs/shopping.svg
+    - assets/svgs/tshirt.svg
     - assets/images/jejechic_logo.png
     - assets/images/keranjang.png
     - assets/images/profil.png
     - assets/images/preview-1.png
     - assets/images/image-1.jpg
+    - assets/images/image-2.jpg
+    - assets/images/image-3.jpg
+    - assets/images/image-4.jpg
+    - assets/images/men-1.png
+    - assets/images/men-2.png
+    - assets/images/men-3.png
+    - assets/images/men-4.png
+    - assets/images/men-5.png
+    - assets/images/men-6.png
+    - assets/images/men-7.png
+    - assets/images/men-8.png
+    - assets/images/women-1.png
+    - assets/images/women-2.png
+    - assets/images/women-3.png
+    - assets/images/women-4.png
+    - assets/images/women-5.png
+    - assets/images/women-6.png
+    - assets/images/women-7.png
+    - assets/images/women-8.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

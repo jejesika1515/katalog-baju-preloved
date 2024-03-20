@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jejechic/utils/global.dart';
 import 'package:jejechic/screens/register/register_screen.dart';
 import 'package:flutter/gestures.dart';
-import 'package:jejechic/screens/login/otp_screen.dart'; // Impor untuk file otp_screen.dart
+import 'package:jejechic/screens/login/otp_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -12,13 +12,11 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background
           Global().background(context),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Login Text
                 Text(
                   'LOGIN',
                   style: TextStyle(
@@ -29,7 +27,6 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Please login to your account Text
                 Text(
                   'Please login to your account',
                   style: TextStyle(
@@ -40,7 +37,6 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Rectangle 1
                 Container(
                   width: 500,
                   height: 70,
@@ -78,11 +74,8 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Rectangle 2
                 GestureDetector(
                   onTap: () {
-                    // Tambahkan fungsi yang sesuai untuk mengirim kode
-                    // Misalnya, melakukan navigasi ke halaman OTP
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => OtpScreen()),
@@ -110,7 +103,6 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Don't have an account Text
                 RichText(
                   text: TextSpan(
                     children: [
@@ -126,17 +118,17 @@ class LoginScreen extends StatelessWidget {
                       TextSpan(
                         text: 'Register',
                         style: TextStyle(
-                          color: Color(0xFF182381), // Warna biru tua
+                          color: Color(0xFF182381),
                           fontSize: 15,
                           fontFamily: 'Montserrat',
                           fontWeight: FontWeight.w400,
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            // Navigasi ke halaman RegisterScreen saat teks "Register" di-klik
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => RegisterScreen()),
+                              MaterialPageRoute(
+                                  builder: (context) => RegisterScreen()),
                             );
                           },
                       ),

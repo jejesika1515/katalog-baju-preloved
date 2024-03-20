@@ -9,13 +9,11 @@ class OtpScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background
           Global().background(context),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Otp Text
                 Text(
                   'One Time Password - OTP',
                   style: TextStyle(
@@ -26,7 +24,6 @@ class OtpScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Please input the code that we’ve sent into your mobile phone Text
                 Text(
                   "Please input the code that we’ve sent into your mobile phone.",
                   style: TextStyle(
@@ -37,7 +34,6 @@ class OtpScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Rectangle 1 with TextField
                 Container(
                   width: 500,
                   height: 70,
@@ -72,7 +68,6 @@ class OtpScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Rectangle 2
                 Container(
                   width: 500,
                   height: 70,
